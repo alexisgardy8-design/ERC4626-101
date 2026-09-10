@@ -11,6 +11,14 @@ contract Counter is ERC4626 {
     {
     }
 
+    function convertToShares(uint256 assets) public view override returns (uint256) {
+        return super.convertToShares(assets);
+    }
+
+    function convertToAssets(uint256 shares) public view override returns (uint256) {
+        return super.convertToAssets(shares);
+    }
+
     function previewDeposit(uint256 assets) public view override returns (uint256) {
         return super.previewDeposit(assets);
     }
