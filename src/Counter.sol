@@ -34,4 +34,20 @@ contract Counter is ERC4626 {
     function mint(uint256 shares, address receiver) public override returns (uint256) {
         return super.mint(shares, receiver);
     }
+
+    function previewWithdraw(uint256 assets) public view override returns (uint256) {
+        return super.previewWithdraw(assets);
+    }
+
+    function maxWithdraw(address owner) public view override returns (uint256) {
+        return super.maxWithdraw(owner);
+    }
+
+    function withdraw(uint256 assets, address receiver, address owner)
+        public
+        override
+        returns (uint256)
+    {
+        return super.withdraw(assets, receiver, owner);
+    }
 }
