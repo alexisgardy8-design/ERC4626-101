@@ -22,4 +22,16 @@ contract Counter is ERC4626 {
     function deposit(uint256 assets, address receiver) public override returns (uint256) {
         return super.deposit(assets, receiver);
     }
+
+    function previewMint(uint256 shares) public view override returns (uint256) {
+        return super.previewMint(shares);
+    }
+
+    function maxMint(address receiver) public view override returns (uint256) {
+        return super.maxMint(receiver);
+    }
+
+    function mint(uint256 shares, address receiver) public override returns (uint256) {
+        return super.mint(shares, receiver);
+    }
 }
