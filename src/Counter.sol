@@ -50,4 +50,20 @@ contract Counter is ERC4626 {
     {
         return super.withdraw(assets, receiver, owner);
     }
+
+    function previewRedeem(uint256 shares) public view override returns (uint256) {
+        return super.previewRedeem(shares);
+    }
+
+    function maxRedeem(address owner) public view override returns (uint256) {
+        return super.maxRedeem(owner);
+    }
+
+    function redeem(uint256 shares, address receiver, address owner)
+        public
+        override
+        returns (uint256)
+    {
+        return super.redeem(shares, receiver, owner);
+    }
 }
